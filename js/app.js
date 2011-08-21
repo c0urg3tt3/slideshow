@@ -51,8 +51,7 @@ App.DiaposController = SC.ArrayProxy.create({
 App.SlideShowController = SC.Object.create({
   currentPosition: 0,
   // isLeft: NO,
-  slideWidth: 512,
-  canBack: YES
+  slideWidth: 512
 });
 
 /** 
@@ -148,7 +147,6 @@ App.DiaposView = SC.CollectionView.extend({
   contentBinding: "App.DiaposController",
   width: 0,
   positionMax: 0,
-  canBackBinding: "App.SlideShowController.canBack",
   currentPositionBinding: "App.SlideShowController.currentPosition",
   slideWidthBinding: "App.SlideShowController.slideWidth",
   widthNeedChange: function(){
